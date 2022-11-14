@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Delivery</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../delivery/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Shipping details</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." required minlength="4">
+
+            <label for="surnames">Surname</label>
+            <input type="text" id="surnames" name="surnames" placeholder="Your surnames." required minlength="5">
+
+            <div>
+                <label for="delivery date">Delivery date</label>
+                <input type="date" id="datePickerId" name="Delivery date" placeholder="Choose the date..." required>
+            </div>
+
+            <h2>Address</h2>
+            <label for="street">Street</label>
+            <input type="text" id="street" name="street" placeholder="Your street..." required minlength="5">
+
+            <label for="houseNumber">House number</label>
+            <input type="number" name="houseNumber" placeholder="House number.." required min="0.000001">
+
+            <label for="flatNumber">Flat number</label>
+            <input type="number" name="flatNumber" placeholder="Flat number.." required min="0.000001">
+
+            <div class="payment_info">
+                <h2>Payment information</h2>
+                <div class="radios">
+                    <input id="card" type='radio' name="card">
+                    <p>Card</p>
+                    <input id="cash" type='radio' name="cash">
+                    <p>Cash</p>
+                </div>
+            </div>
+            <div class="gifts">
+                <h2>Choose 2 gifts:</h2>
+                <input id="card" type='checkbox' name="card">
+                <p> Pack as a gift</p>
+                <input id="cash" type='checkbox' name="cash">
+                <p>Add postcard</p>
+                <input id="card" type='checkbox' name="card"></p>Provide 2% discount to the next time</p>
+                <input id="cash" type='checkbox' name="cash"></p>Pranded pen or pencil</p>
+            </div>
+            <div>
+                <input type="submit" value="Complit">
+            </div>
+        </form>
+    </div>
+    <script src="../delivery/script.js" async defer></script>
+</body>
+
+</html>
