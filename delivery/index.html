@@ -12,49 +12,75 @@
 
 <body>
     <div class="container">
-        <h2>Shipping details</h2>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name.." required minlength="4">
 
-            <label for="surnames">Surname</label>
-            <input type="text" id="surnames" name="surnames" placeholder="Your surnames." required minlength="5">
-
-            <div>
-                <label for="delivery date">Delivery date</label>
-                <input type="date" id="datePickerId" name="Delivery date" placeholder="Choose the date..." required>
+        <form id="form" action="#form" method="post">
+            <h2>Shipping details</h2>
+            <div class="form-box" data-errormsg="">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="firstname" class="input" autofocus placeholder="Your name..."
+                    required minlength="4">
             </div>
-
-            <h2>Address</h2>
-            <label for="street">Street</label>
-            <input type="text" id="street" name="street" placeholder="Your street..." required minlength="5">
-
-            <label for="houseNumber">House number</label>
-            <input type="number" name="houseNumber" placeholder="House number.." required min="0.000001">
-
-            <label for="flatNumber">Flat number</label>
-            <input type="number" name="flatNumber" placeholder="Flat number.." required min="0.000001">
-
+            <div class="form-box" data-errormsg="">
+                <label for="surnames">Surname</label>
+                <input type="text" id="surnames" name="surnames" class="input" placeholder="Your surnames..." required
+                    minlength="5">
+            </div>
+            <div class="form-box" data-errormsg="">
+                <label for="datePickerId">Delivery date</label>
+                <input type="date" id="datePickerId" class="input" name="Delivery date" placeholder="Choose the date..."
+                    required>
+            </div>
+            <div class="form-box" data-errormsg="">
+                <h2>Address</h2>
+                <label for="street">Street</label>
+                <input type="text" id="street" name="street" class="input" placeholder="Your street..." required
+                    minlength="5">
+            </div>
+            <div class="form-box" data-errormsg="">
+                <label for="houseNumber">House number</label>
+                <input type="number" name="houseNumber" placeholder="House number.." class="input" required min="1">
+            </div>
+            <div class="form-box" data-errormsg="">
+                <label for="flatNumber">Flat number</label>
+                <input type="number" name="flatNumber" class="input" placeholder="Flat number.." required min="1">
+            </div>
             <div class="payment_info">
                 <h2>Payment information</h2>
                 <div class="radios">
-                    <input id="card" type='radio' name="card">
-                    <p>Card</p>
-                    <input id="cash" type='radio' name="cash">
-                    <p>Cash</p>
+                    <div>
+                        <label for="card">Card</label>
+                        <input id="card" type='radio' class="input" name="radio" checked>
+                    </div>
+                    <div>
+                        <label for="cash">Cash</label>
+                        <input id="cash" type='radio' class="input" name="radio">
+                    </div>
                 </div>
             </div>
             <div class="gifts">
                 <h2>Choose 2 gifts:</h2>
-                <input id="card" type='checkbox' name="card">
-                <p> Pack as a gift</p>
-                <input id="cash" type='checkbox' name="cash">
-                <p>Add postcard</p>
-                <input id="card" type='checkbox' name="card"></p>Provide 2% discount to the next time</p>
-                <input id="cash" type='checkbox' name="cash"></p>Pranded pen or pencil</p>
+                <div class="gifts_inputs">
+                    <div>
+                        <label for="card">Pack as a gift</label>
+                        <input id="card" type='checkbox' name="card">
+                    </div>
+                    <div>
+                        <label for="card">Add postcard</label>
+                        <input id="cash" type='checkbox' name="cash">
+                    </div>
+                    <div>
+                        <label for="card">Provide 2% discount to the next time</label>
+                        <input id="card" type='checkbox' name="card">
+                    </div>
+                    <div>
+                        <label for="card">Branded pen or pencil</label>
+                        <input id="cash" type='checkbox' name="cash">
+                    </div>
+                </div>
             </div>
-            <div>
-                <input type="submit" value="Complit">
+            <div class="form_buttons">
+                <input type="reset" id="cancel-button"></input>
+                <input type="submit" id="submit-button"></input>
             </div>
         </form>
     </div>
